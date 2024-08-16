@@ -2,62 +2,57 @@
 {% block content %}
 {% if user.is_authenticated %}
 
-<table class="table table-striped table-hover table-bordered">
-  <thead class="table-dark">
+<table class="table table-striped table-hover table-bordered" style="border-collapse: collapse;">
+  <thead style="background-color: #6f42c1; color: rgb(206, 30, 30); text-align: center;">
     <tr>
-      <th scope="col">ID</th>
-      <th scope="col">NAME</th>
-      <th scope="col">EMAIL</th>
-      <th scope="col">PHONE</th>
-      <th scope="col">ADDRESS</th>
-      <th scope="col">CITY</th>
-      <th scope="col">STATE</th>
-      <th scope="col">ZIPCODE</th>
-      <th scope="col">CREATED AT</th>
-      
+      <th scope="col" style="padding: 12px;">ID</th>
+      <th scope="col" style="padding: 12px;">NAME</th>
+      <th scope="col" style="padding: 12px;">EMAIL</th>
+      <th scope="col" style="padding: 12px;">PHONE</th>
+      <th scope="col" style="padding: 12px;">ADDRESS</th>
+      <th scope="col" style="padding: 12px;">CITY</th>
+      <th scope="col" style="padding: 12px;">STATE</th>
+      <th scope="col" style="padding: 12px;">ZIPCODE</th>
+      <th scope="col" style="padding: 12px;">CREATED AT</th>
     </tr>
   </thead>
   <tbody>
-    
-{% if records %}
-	{% for record in records %}
-		<tr>
-      <td><a href="{% url 'record' record.id %}">{{ record.id }}</a></td>
-			<td>{{ record.first_name }} {{ record.last_name }}</td>
-			<td>{{ record.email }}</td>
-			<td>{{ record.phone }}</td>
-			<td>{{ record.address }}</td>
-			<td>{{ record.city }}</td>
-			<td>{{ record.state }}</td>
-			<td>{{ record.zipcode }}</td>
-			<td>{{ record.created_at }}</td>
-
-		</tr>
-	{% endfor %}
-{% endif %}
-
+    {% if records %}
+    {% for record in records %}
+    <tr style="background-color: #2673c0;">
+      <td style="padding: 12px; text-align: center;"><a href="{% url 'record' record.id %}" style="color: #542aa3; text-decoration: none;">{{ record.id }}</a></td>
+      <td style="padding: 12px;">{{ record.first_name }} {{ record.last_name }}</td>
+      <td style="padding: 12px;">{{ record.email }}</td>
+      <td style="padding: 12px;">{{ record.phone }}</td>
+      <td style="padding: 12px;">{{ record.address }}</td>
+      <td style="padding: 12px;">{{ record.city }}</td>
+      <td style="padding: 12px;">{{ record.state }}</td>
+      <td style="padding: 12px;">{{ record.zipcode }}</td>
+      <td style="padding: 12px;">{{ record.created_at }}</td>
+    </tr>
+    {% endfor %}
+    {% endif %}
   </tbody>
 </table>
 
 {% else %}
 <div class="col-md-6 offset-md-3">
-<h1>Login</h1>
-<br/>
-
-<form method="POST" action="{% url 'home' %}">
-	{% csrf_token %}
-
-  <div class="mb-3">
-    <input type="text" class="form-control" name="username" placeholder="Username" required>
-  </div><br/>
-  <div class="mb-3">
-    <input type="password" class="form-control" name="password" placeholder="Password" required>
-  </div>
+  <h1>Login</h1>
   <br/>
-  <button type="submit" class="btn btn-secondary">Login</button>
 
-</form>
+  <form method="POST" action="{% url 'home' %}">
+    {% csrf_token %}
 
+    <div class="mb-3">
+      <input type="text" class="form-control" name="username" placeholder="Username" required>
+    </div><br/>
+    <div class="mb-3">
+      <input type="password" class="form-control" name="password" placeholder="Password" required>
+    </div>
+    <br/>
+    <button type="submit" class="btn btn-secondary">Login</button>
+
+  </form>
 </div>
 {% endif %}
 {% endblock %}
