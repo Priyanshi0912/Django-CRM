@@ -34,8 +34,10 @@ git clone https://github.com/yourusername/your-repository.git
 cd your-repository
 ```
 ## 3. Create and Activate a Virtual Environment
+```
 python -m venv virt
 source virt/Scripts/activate   
+```
 
 ## 4. Install the Required Dependencies
 ```
@@ -51,7 +53,7 @@ python manage.py startapp website
 ```
 
 ## 6. Database setup
-Add the following configuration to your settings.py file for the MySQL database:
+Add the following configuration to your `settings.py` file for the MySQL database:
 
 ```
 DATABASES = {
@@ -59,7 +61,7 @@ DATABASES = {
         "ENGINE": "django.db.backends.mysql",
         "NAME": "elderco",
         "USER": "name_of_your_root_user",
-        "PASSWORD": "your_my_mysql_password",
+        "PASSWORD": "your_mymysql_password",
         "HOST": "localhost",
         "PORT": "3306",
     }
