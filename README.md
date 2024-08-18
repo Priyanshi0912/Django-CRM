@@ -127,6 +127,6 @@ Django-CRM
 │
 ├── manage.py
 |
-├── mydb.py
-└── .gitignore
+└── mydb.py
+
 ```
