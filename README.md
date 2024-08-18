@@ -2,7 +2,7 @@
 
 ## Description
 
-This project is a web application built using Django, designed to manage user **registration, login, and logout functionalities**. It includes user authentication and authorization, allowing authorized users to to perform various data operations, including [inserting, viewing, deleting, and updating records in the database]. This project is built using Django, Python, HTML, and Bootstrap It includes user authentication and authorization, allowing authorized users to perform CRUD (Create, Read, Update, Delete) operations on the [mention the core data or functionality]. 
+This project is a web application built using Django, designed to manage user **registration, login, and logout functionalities**. It includes user authentication and authorization, allowing authorized users to to perform various data operations, including [inserting, viewing, deleting, and updating records in the database]. This project is built using Django, Python, HTML, and Bootstrap 
 
 ## Features
 
