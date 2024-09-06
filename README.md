@@ -26,12 +26,12 @@ This project is a web application built using Django, designed to manage user **
 ## 1. Clone the Repository
 
 ```bash
-git clone https://github.com/yourusername/your-repository.git
+git clone https://github.com/Priyanshi0912/Django-CRM.git
 ```
 
 ## 2. Navigate to the Project Directory
 ```
-cd your-repository
+cd dcrm
 ```
 ## 3. Create and Activate a Virtual Environment
 ```
